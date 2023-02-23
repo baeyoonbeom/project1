@@ -1,0 +1,392 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+html{scroll-behavior: smooth;}
+body{
+  font-family: 'Encode Sans', sans-serif;
+  color: #111;
+}
+
+/* Top Button______________________________ */
+.top{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+.top a{
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url(../image/top.png) no-repeat;
+  transition: 0.3s;
+}
+.top a:hover{background-image: url(../image/top_on.png);}
+
+
+/* Header______________________________ */
+header{
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  z-index: 1;
+}
+nav{
+  width: 1000px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img{width: 130px;}
+.gnb{display: flex;}
+.gnb li{
+  border-left: 2px solid #fd0;
+  padding: 0 30px;
+}
+.gnb li:first-child{border: none;}
+.gnb li a{
+  color: white;
+  text-transform: uppercase;
+  transition: 0.35s;
+}
+.gnb li a:hover{color: #fd0;}
+
+
+/* Visual Image______________________________ */
+main{
+  width: 100%;
+  height: 600px;
+  background: url(image/visual-image.jpg) no-repeat center top;
+  background-size: cover;
+}
+.visual{
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.visual h1{
+  color: #fd0;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 60px;
+  font-size: 50px;
+  font-weight: normal;
+}
+
+/* Section______________________________ */
+section{width: 100%;}
+section .menu-section{
+  padding-top: 80px;
+  margin-bottom: 20px;
+}
+section h2{
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-right: 4px solid #fd0;
+  display: inline-block;
+  padding: 0 20px 0 10px;
+}
+section .btn{
+  margin: 0 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+section a:hover{color: goldenrod;}
+
+/* __________Brand */
+#brand{
+  width: 1000px;
+  margin: auto;
+  padding-bottom: 120px;
+}
+.brand-title{overflow: hidden;}
+.brand-title img{height: 280px;}
+.brand-title h3{
+  display: inline-block;
+  height: 280px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 95px;
+  border-left: 4px solid lightslategray;
+  color: lightslategray;
+  margin-left: 20px;
+  padding: 0 30px;
+}
+#brand p{
+  margin: 40px 40px;
+  font-size: 18px;
+}
+#brand strong{
+  margin: 40px 40px;
+  font-size: 22px;
+}
+
+/* __________Disney Plus */
+#disneyplus{
+  background-color: #222;
+  padding-bottom: 120px;
+  color: white;
+}
+.disneyplus-section{
+  width: 1000px;
+  margin: auto;
+}
+.videos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video1{background: url(image/video01-docu.png) no-repeat 40% center;}
+.video2{background: url(image/video02-drama.png) no-repeat 55% center;}
+.video3{background: url(image/video03-history.png) no-repeat 80% center;}
+.video4{background: url(image/video04-nature.png) no-repeat 80% center;}
+.video5{background: url(image/video05-science.png) no-repeat 95% center;}
+.video1, .video2, .video3, .video4, .video5{
+  width: 1000px;
+  height: 700px;
+  background-size: cover;
+  flex: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.video1:hover, .video2:hover, .video3:hover, .video4:hover, .video5:hover{
+  flex: 5;
+  opacity: 1;
+}
+.videos h3{
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #fd0;
+  float: left;
+  margin: 10px 17px;
+  border: 2px solid #fd0;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  transition: 0.5s;
+}
+.video1:hover h3, .video2:hover h3, .video3:hover h3, .video4:hover h3, .video5:hover h3{
+  font-size: 32px;
+}
+.video-caption{
+  margin: 400px auto;
+  text-align: center;
+  width: 560px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.video-caption span{
+  display: inline-block;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+.video-caption p{
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  color: goldenrod;
+  margin-bottom: 40px;
+}
+.video2 p, .video4 p{margin-bottom: 70px;}
+.video-caption a{
+  background-color: white;
+  color: black;
+  padding: 6px 20px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.video-caption a:hover{
+  background-color: black;
+  color: #fd0;
+  border: 1px solid gray;
+}
+.video1:hover .video-caption, .video2:hover .video-caption, .video3:hover .video-caption, .video4:hover .video-caption, .video5:hover .video-caption{opacity: 1;}
+
+/* __________Store */
+#store{
+  width: 1000px;
+  margin: auto;
+  padding-bottom: 120px;
+}
+.it-item ul li{
+  display: flex;
+  background-color: #101010;
+  margin: 0 10px 5px;
+}
+.it-item ul li img{width: 450px;}
+.it-item ul li .title{
+  color: white;
+  font-size: 80px;
+  line-height: 80px;
+  margin: 10px 20px;
+  width: 600px;
+}
+.it-item ul li span{
+  font-size: 26px;
+  color: #fd0;
+}
+.it-item ul li h4{
+  text-align: right;
+  margin: 30px 0;
+  color: beige;
+}
+.it-item ul li a{
+  font-size: 20px;
+  text-align: right;
+}
+.items ul{
+  overflow: hidden;
+  margin-top: 30px;
+}
+.items ul li{ 
+  border: 1px solid transparent;
+  border-radius: 10px;
+  float: left;
+  width: 180px;
+  height: 290px;
+  padding: 10px;
+  text-align: center;
+  margin: 5px 21px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.items ul li:hover{
+  border: 1px solid coral;
+}
+.items ul li img{
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 5px;
+}
+.items ul li h4{
+  display: inline-block;
+  width: 180px;
+  height: 80px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+.items ul li p{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* __________Magazines */
+#magazines{
+  background-color: #222;
+  padding-bottom: 120px;
+  color: white;
+}
+.section4{
+  width: 1000px;
+  margin: auto;
+}
+.section4 h3{
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 26px;
+  font-weight: normal;
+  color: #fd0;
+  margin: 20px;
+}
+.magazines{
+  width: 1000px;
+  height: 340px;
+  overflow: hidden;
+}
+.magazines ul{
+  display: flex;
+  width: 3000px;
+  animation: magazine-ani 20s linear infinite forwards;
+}
+.magazines ul:hover{
+  animation-play-state: paused;
+}
+.magazines ul li{
+  width: 240px;
+  height: 300px;
+  float: left;
+  text-align: center;
+  margin: 0 5px;
+  position: relative;
+}
+.magazines ul li img{
+  border-radius: 10px;
+  width: 240px;
+  height: 300px;
+  background-size: cover;
+}
+.magazines ul li .magazine{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 0 0 9px 9px;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.magazines ul li:hover .magazine{opacity: 1;}
+.magazines ul li .magazine h4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 45px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.magazines ul li .magazine p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  width: 220px;
+  height: 80px;
+  margin-left: 10px;
+}
+@keyframes magazine-ani{
+  100%{transform: translateX(-80%);}
+}
+
+/* Footer______________________________ */
+.footer-nav{
+  width: 1000px;
+  margin: auto;
+  padding: 30px;
+}
+.sns{
+  margin: 0 40px;
+  font-size: 22px;
+}
+.sns p{
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.sns a{
+  margin: 0 5px;
+  font-size: 28px;
+}
+.sns a:hover .fa-youtube{color: crimson;}
+.sns a:hover .fa-instagram{color: violet;}
+.sns a:hover .fa-facebook{color: royalblue;}
+.footer-nav div:not(.sns) p{
+  font-size: 12px;
+  margin: 20px;
+}
